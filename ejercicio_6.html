@@ -14,48 +14,90 @@
 <body>
 
     <nav>
-        <h1><a href="index.html">EJERCICIO 6</a></h1>
+        <h1><a href="index.html">EJERCICIO DATOS PERSONALES</a></h1>
     </nav>
 
     <div class="container">
 
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                aria-describedby="basic-addon1">
-        </div>
+        <form>
 
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-            <span class="input-group-text" id="basic-addon2">@example.com</span>
-        </div>
+            <label for="" class="form-label">Seleccione Su Tipo De Documento</label>
+            <select class="form-select" aria-label="Default select example" id="ss">
+                <option selected>- - -</option>
+                <option value="1">Cedula De Ciudadania</option>
+                <option value="2">Tarjeta De Identidad</option>
+                <option value="3">Cedula De Extranjeria</option>
+            </select>
 
-        <label for="basic-url" class="form-label">Your vanity URL</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-        </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Digite Su No De Documento</label>
+                <input type="number" class="form-control" id="nt" aria-placeholder="Ingrese su numero de documento">
+            </div>
 
-        <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text">.00</span>
-        </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Digite Su Nombre</label>
+                <input type="text" class="form-control" id="nt" aria-placeholder="Ingrese su nombre">
+            </div>
 
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-        </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Digite Su Apellido</label>
+                <input type="text" class="form-control" id="nt" aria-placeholder="Ingrese su apellido">
+            </div>
 
-        <div class="input-group">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Seleccione Su Fecha De Nacimiento</label>
+                <input type="date" class="form-control" id="nt"
+                    aria-placeholder="Ingrese el numero de grados de temperatura que desea convertir">
+            </div>
 
-        <button type="submit" class="btn btn-success">CALCULAR</button>
-        <a href="index.html" class="btn btn-primary">REGRESAR</a>
+            <div class="mb-3">
+                <label for="" class="form-label">Digite Su Correo Electronico</label>
+                <input type="email" class="form-control" id="nt" aria-placeholder="Ingrese su correo electronico">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Digite Su Contraseña</label>
+                <input type="password" class="form-control" id="nt" aria-placeholder="Ingrese su contraseña">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Compruebe Su contraseña</label>
+                <input type="password" class="form-control" id="nt" aria-placeholder="Compruebe su contraseña">
+            </div>
+
+            <input type="checkbox" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Aceptar Términos De Uso
+            </input>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Términos De Uso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Al utilizar esta Página el Usuario acepta los términos y condiciones vigentes en el momento
+                            de la utilización.
+
+                            Estos términos y condiciones pueden cambiar en cualquier momento sin notificación. El
+                            Usuario debe, por lo tanto, consultar los términos y condiciones en cada visita a la Página.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">ACEPTAR</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+                <button type="submit" class="btn btn-success">CALCULAR</button>
+                <a href="index.html" class="btn btn-primary">REGRESAR</a>
+            </center>
+
+        </form>
 
     </div>
 
