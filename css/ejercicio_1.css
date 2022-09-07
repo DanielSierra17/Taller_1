@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("../img/una-taza-de-javascript.png");
+    background-image: url("../img/yellow-abstract-background-free-vector.jpg");
     background-size: cover;
 }
 
@@ -21,10 +21,22 @@ nav {
     margin-bottom: 4em;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+}
+
 .container {
     width: 50%;
     background-color: #FFFFFF;
     border-radius: 8px;
     margin-top: 5em;
-    
+}
+
+.button {
+    margin-top: 1em;
 }
