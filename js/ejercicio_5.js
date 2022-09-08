@@ -60,7 +60,7 @@ btnmod.addEventListener("click", () => {
     venmod.style.display = "block";
 })
 
-cermodal.addEventListener("click", () => {
+cermod.addEventListener("click", () => {
     venmod.style.display = "none";
 })
 
