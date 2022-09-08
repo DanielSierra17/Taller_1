@@ -35,6 +35,7 @@ function temperaturas() {
         let formula = ((ng) + 273.15)
 
         alert(`La conversión de grados Celcius a Kelvin es ${formula}`)
+        
     }
 
     else if (so == 3 && st == 1) {
