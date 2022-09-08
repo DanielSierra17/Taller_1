@@ -5,6 +5,7 @@ function temperaturas() {
     let so = document.getElementById("sp").value
     let st = document.getElementById("ss").value
     let ng = document.getElementById("nt").value
+    ng = parseInt(ng)
 
     if (so == 1 && st == 2) {
 
