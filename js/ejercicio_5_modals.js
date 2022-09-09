@@ -1,7 +1,5 @@
 let btnmodal = document.getElementById("am")
-
 let venmodal = document.getElementById("vmpc")
-
 let cermodal = document.querySelector(".cerrarModal")
 
 btnmodal.addEventListener("click", () => {
@@ -18,11 +16,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let btnmoda = document.getElementById("dm")
-
 let venmoda = document.getElementById("vmac")
-
 let cermoda = document.querySelector(".cerrarModal1")
 
 btnmoda.addEventListener("click", () => {
@@ -39,11 +34,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let btnmod = document.getElementById("em")
-
 let venmod = document.getElementById("vmpt")
-
 let cermod = document.querySelector(".cerrarModal2")
 
 btnmod.addEventListener("click", () => {
@@ -60,11 +52,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let btnmo = document.getElementById("mm")
-
 let venmo = document.getElementById("vmat")
-
 let cermo = document.querySelector(".cerrarModal3")
 
 btnmo.addEventListener("click", () => {
@@ -81,11 +70,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let btnm = document.getElementById("im")
-
 let venm = document.getElementById("vmpr")
-
 let cerm = document.querySelector(".cerrarModal4")
 
 btnm.addEventListener("click", () => {
@@ -102,11 +88,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let btn = document.getElementById("arm")
-
 let ven = document.getElementById("vmar")
-
 let cer = document.querySelector(".cerrarModal5")
 
 btn.addEventListener("click", () => {
@@ -123,11 +106,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let bt = document.getElementById("ejm")
-
 let ve = document.getElementById("vmpcc")
-
 let ce = document.querySelector(".cerrarModal6")
 
 bt.addEventListener("click", () => {
@@ -144,11 +124,8 @@ window.addEventListener("click", (e) => {
     }
 })
 
-
 let b = document.getElementById("inm")
-
 let v = document.getElementById("vmacc")
-
 let c = document.querySelector(".cerrarModal7")
 
 b.addEventListener("click", () => {
