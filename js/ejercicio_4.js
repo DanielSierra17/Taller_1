@@ -53,7 +53,7 @@ function instructores() {
 
     else {
 
-        alert(`La respuesta es incorrecta`)
+        alert(`La respuesta es incorrecta, nombres o materia incorrecta por favor verifique sus datos e intentelo nuevamente`)
 
     }
 
