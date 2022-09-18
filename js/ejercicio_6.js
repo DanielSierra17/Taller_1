@@ -14,7 +14,6 @@ let expresiones = {
 
 let campos = {
 
-    tipoDocumento: false,
     numeroDocumento: false,
     nombre: false,
     apellido: false,
@@ -28,9 +27,6 @@ let validarFormulario = (e) => {
 
     switch (e.target.name) {
 
-        case "tipoDocumento":
-            validarCampo(expresiones.tipoDocumento, e.target, 'tipoDocumento')
-            break;
         case "numeroDocumento":
             validarCampo(expresiones.numeroDocumento, e.target, 'numeroDocumento')
             break;

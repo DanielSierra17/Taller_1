@@ -29,7 +29,7 @@ function instructores() {
 
     else if (ip == 4 && is == 4 && im == 4) {
 
-        Swal.fire(`La respuesta es correcta, tu nombre es Yaneth, tu apellido es Castañeda y la asignatura que impartes es Gestión Ambiental`)
+        Swal.fire(`La respuesta es correcta, tu nombre es Yaneth, tu apellido es Castillo y la asignatura que impartes es Gestión Ambiental`)
 
     }
 
