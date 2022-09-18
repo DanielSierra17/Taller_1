@@ -6,7 +6,8 @@ function longitud() {
     let pal = p.value
     let bot = p.value.length
 
-    alert(`La longitud de la palabra ${pal} es ${bot}`)
+    Swal.fire(`La longitud de la palabra ${pal} es ${bot}`)
+
 }
 
 b.addEventListener('click', longitud)
@@ -18,7 +19,8 @@ function mayuscula() {
 
     let bot = pa.value.toUpperCase()
 
-    alert(`La palabra en mayusculas es ${bot}`)
+    Swal.fire(`La palabra en mayusculas es ${bot}`)
+
 }
 
 bo.addEventListener('click', mayuscula)
@@ -30,7 +32,8 @@ function minuscula() {
 
     let but = pal.value.toLowerCase()
 
-    alert(`La palabra en minusculas es ${but}`)
+    Swal.fire(`La palabra en minusculas es ${but}`)
+
 }
 
 bot.addEventListener('click', minuscula)
@@ -43,7 +46,8 @@ function primerCaracter() {
     let palab = pala.value
     let buto = pala.value.charAt(0)
 
-    alert(`La primer letra de la palabra ${palab} es ${buto}`)
+    Swal.fire(`La primer letra de la palabra ${palab} es ${buto}`)
+
 }
 
 boto.addEventListener('click', primerCaracter)

@@ -30,6 +30,14 @@ a:hover {
     color: #000000;
 }
 
+.btn-warning {
+    color: #FFFFFF;
+}
+
+.btn-warning:hover {
+    color: #FFFFFF;
+}
+
 @media screen and (min-width: 320px) {
 
     a {
@@ -93,7 +101,7 @@ a:hover {
 }
 
 .contenidoModal h2 {
-    background-color: #FD7E14;
+    background-color: #6610f2;
     color: #FFFFFF;
     border-radius: 8px;
     padding: 1rem 0;

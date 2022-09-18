@@ -57,7 +57,7 @@ a:hover {
 }
 
 .formulario__mensaje {
-    height: 45px;
+    height: 2.8em;
     line-height: 45px;
     color: #FFFFFF;
     background: #DC3545;
@@ -76,8 +76,13 @@ a:hover {
 }
 
 .formulario__mensaje-exito {
-    font-size: 14px;
-    color: #119200;
+    height: 2.8em;
+    line-height: 45px;
+    color: #FFFFFF;
+    background: #198754;
+    margin: 1em;
+    padding: 0 15px;
+    border-radius: 5px;
     display: none;
 }
 
@@ -86,25 +91,29 @@ a:hover {
 }
 
 .formulario__validacion-estado {
-    color: #1ed12d;
+    color: #198754;
     opacity: 1;
 }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
-    color: #1ed12d;
+    color: #198754;
     opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__label {
-    color: #bb2929;
+    color: #DC3545;
 }
 
 .formulario__grupo-incorrecto .formulario__validacion-estado {
-    color: #bb2929;
+    color: #DC3545;
     opacity: 1;
 }
 
+.formulario__grupo-correcto .formulario__input {
+    border: 3px solid #198754;
+}
+
 .formulario__grupo-incorrecto .formulario__input {
-    border: 3px solid #bb2929;
+    border: 3px solid #DC3545;
 }

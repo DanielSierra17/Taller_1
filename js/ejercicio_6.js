@@ -6,24 +6,31 @@ let expresiones = {
     numeroDocumento: /^\d{10}$/, // 7 a 14 numeros.
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    contrasena: /^.{4,12}$/, // 4 a 12 digitos.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    fechaNacimiento: /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/, // Debe llevar el formato dia, mes, año.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Debe llevar el signo @ y .com.
+    contrasena: /^.{4,12}$/ // 4 a 12 digitos.
 
 }
 
 let campos = {
 
+    tipoDocumento: false,
     numeroDocumento: false,
     nombre: false,
     apellido: false,
-    contrasena: false,
+    fechaNacimiento: false,
     correo: false,
+    contrasena: false
 
 }
 
 let validarFormulario = (e) => {
 
     switch (e.target.name) {
+
+        case "tipoDocumento":
+            validarCampo(expresiones.tipoDocumento, e.target, 'tipoDocumento')
+            break;
         case "numeroDocumento":
             validarCampo(expresiones.numeroDocumento, e.target, 'numeroDocumento')
             break;
@@ -33,16 +40,20 @@ let validarFormulario = (e) => {
         case "apellido":
             validarCampo(expresiones.apellido, e.target, 'apellido')
             break;
-        case "contrasena":
-            validarCampo(expresiones.contrasena, e.target, 'contrasena')
-            validarcontrasena2()
-            break;
-        case "contrasena2":
-            validarcontrasena2()
+        case "fechaNacimiento":
+            validarCampo(expresiones.fechaNacimiento, e.target, 'fechaNacimiento')
             break;
         case "correo":
             validarCampo(expresiones.correo, e.target, 'correo')
             break;
+        case "contrasena":
+            validarCampo(expresiones.contrasena, e.target, 'contrasena')
+            validarContrasena2()
+            break;
+        case "contrasena2":
+            validarContrasena2()
+            break;
+
     }
 
 }
@@ -73,30 +84,30 @@ let validarCampo = (expresion, input, campo) => {
 
 }
 
-let validarPassword2 = () => {
+let validarContrasena2 = () => {
 
-    let inputPassword1 = document.getElementById("contrasena")
-    let inputPassword2 = document.getElementById("contrasena2")
+    let inputContrasena1 = document.getElementById("contrasena")
+    let inputContrasena2 = document.getElementById("contrasena2")
 
-    if (inputPassword1.value !== inputPassword2.value) {
+    if (inputContrasena1.value !== inputContrasena2.value) {
 
         document.getElementById(`grupo__contrasena2`).classList.add('formulario__grupo-incorrecto')
         document.getElementById(`grupo__contrasena2`).classList.remove('formulario__grupo-correcto')
         document.querySelector(`#grupo__contrasena2 i`).classList.add('fa-times-circle')
         document.querySelector(`#grupo__contrasena2 i`).classList.remove('fa-check-circle')
         document.querySelector(`#grupo__contrasena2 .formulario__input-error`).classList.add('formulario__input-error-activo')
-        campos['password'] = false
+        campos['contrasena'] = false
 
     }
 
     else {
 
-        document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto')
-        document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto')
-        document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle')
-        document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle')
-        document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo')
-        campos['password'] = true
+        document.getElementById(`grupo__contrasena2`).classList.remove('formulario__grupo-incorrecto')
+        document.getElementById(`grupo__contrasena2`).classList.add('formulario__grupo-correcto')
+        document.querySelector(`#grupo__contrasena2 i`).classList.remove('fa-times-circle')
+        document.querySelector(`#grupo__contrasena2 i`).classList.add('fa-check-circle')
+        document.querySelector(`#grupo__contrasena2 .formulario__input-error`).classList.remove('formulario__input-error-activo')
+        campos['contrasena'] = true
 
     }
 
@@ -114,14 +125,17 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault()
 
     let terminos = document.getElementById("terminos")
+    let tipoDocumento = document.getElementById("tipoDocumento")
 
-    if (campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
+    if (tipoDocumento.selected && campos.numeroDocumento && campos.nombre && campos.apellido && campos.contrasena && campos.correo && terminos.checked) {
 
         formulario.reset()
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo')
         setTimeout(() => {
+
             document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo')
+
         }, 5000)
 
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {

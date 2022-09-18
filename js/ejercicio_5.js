@@ -7,7 +7,8 @@ function perimetroCuadrado() {
 
     let solucion = lcl * 4
 
-    alert(`El perímetro del cuadrado es: ${solucion}`)
+    Swal.fire(`El perímetro del cuadrado es: ${solucion}`)
+
 }
 
 bto.addEventListener('click', perimetroCuadrado)
@@ -21,7 +22,8 @@ function areaCuadrado() {
 
     let solucion = clc * clc
 
-    alert(`El área del cuadrado es: ${solucion}`)
+    Swal.fire(`El área del cuadrado es: ${solucion}`)
+
 }
 
 tb.addEventListener('click', areaCuadrado)
@@ -40,7 +42,8 @@ function perimetroTriangulo() {
 
     let solucion = ptl + stl + ttl
 
-    alert(`El perímetro del triángulo es: ${solucion}`)
+    Swal.fire(`El perímetro del triángulo es: ${solucion}`)
+
 }
 
 bot.addEventListener('click', perimetroTriangulo)
@@ -56,7 +59,8 @@ function areaTriangulo() {
 
     let solucion = (bast * altut) / 2
 
-    alert(`El área del triángulo es: ${solucion}`)
+    Swal.fire(`El área del triángulo es: ${solucion}`)
+
 }
 
 tob.addEventListener('click', areaTriangulo)
@@ -73,7 +77,8 @@ function perimetroRectangulo() {
 
     let solucion = (2 * rna) + (2 * rla)
 
-    alert(`El perímetro del rectángulo es: ${solucion}`)
+    Swal.fire(`El perímetro del rectángulo es: ${solucion}`)
+
 }
 
 rub.addEventListener('click', perimetroRectangulo)
@@ -89,7 +94,8 @@ function areaRectangulo() {
 
     let solucion = rab * rtla
 
-    alert(`El área del rectángulo es: ${solucion}`)
+    Swal.fire(`El área del rectángulo es: ${solucion}`)
+
 }
 
 rb.addEventListener('click', areaRectangulo)
@@ -104,7 +110,8 @@ function perimetroCirculo() {
 
     let solucion = 2 * 3.1416 * cr
 
-    alert(`El perímetro del círculo es: ${solucion}`)
+    Swal.fire(`El perímetro del círculo es: ${solucion}`)
+
 }
 
 cpb.addEventListener('click', perimetroCirculo)
@@ -118,7 +125,8 @@ function areaCirculo() {
 
     let solucion = (crr * crr) * 3.1416
 
-    alert(`El área del círculo es: ${solucion}`)
+    Swal.fire(`El área del círculo es: ${solucion}`)
+
 }
 
 crb.addEventListener('click', areaCirculo)

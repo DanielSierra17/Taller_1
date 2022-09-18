@@ -11,19 +11,19 @@ function triangulos() {
 
     if (pl == sl && sl == tl) {
 
-        alert(`Los lados digitados corresponden a un triángulo equilatero`)
+        Swal.fire(`Los lados digitados corresponden a un triángulo equilatero`)
 
     }
 
     else if (pl == sl || pl == tl || sl == tl) {
 
-        alert(`Los lados digitados corresponden a un triángulo isosceles`)
+        Swal.fire(`Los lados digitados corresponden a un triángulo isosceles`)
 
     }
 
     else {
 
-        alert(`Los lados digitados corresponden a un triángulo escaleno`)
+        Swal.fire(`Los lados digitados corresponden a un triángulo escaleno`)
 
     }
 

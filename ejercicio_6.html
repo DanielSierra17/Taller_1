@@ -23,25 +23,32 @@
 
     <div class="container">
 
-        <form action="" id="formulario">
+        <form action="" method="" id="formulario">
 
-            <label for="tipoDocumento" class="formulario__label">Seleccione Su Tipo De Documento</label>
-            <select class="form-select" id="tipoDocumento" name="tipoDocumento" aria-label="Default select example">
-                <option selected>- - -</option>
-                <option value="1">Cedula De Ciudadania</option>
-                <option value="2">Tarjeta De Identidad</option>
-                <option value="3">Cedula De Extranjeria</option>
-            </select>
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
-            </p>
+            <div class="mb-3 formulario__grupo" id="grupo__tipoDocumento">
+                <label for="tipoDocumento" class="formulario__label">Seleccione Su Tipo De Documento</label>
+                <select class="form-select formulario__input" aria-label="Default select example">
+                    <option>- - -</option>
+                    <option id="tipoDocumento" name="tipoDocumento" value="1">Cedula De Ciudadania</option>
+                    <option id="tipoDocumento" name="tipoDocumento" value="2">Tarjeta De Identidad</option>
+                    <option id="tipoDocumento" name="tipoDocumento" value="3">Cedula De Extranjeria</option>
+                </select>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                <p class="formulario__input-error">No ha seleccionado ningun tipo de documento valido. por favor
+                    seleccione
+                    una opcion valida.
+                </p>
+            </div>
 
             <div class="mb-3 formulario__grupo" id="grupo__numeroDocumento">
                 <label for="numeroDocumento" class="formulario__label">Digite Su No De Documento</label>
-                <input type="number" class="form-control formulario__input" id="numeroDocumento" name="numeroDocumento"
-                    aria-placeholder="Ingrese Su Numero De Documento">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <div class="formulario__grupo-input">
+                    <input type="number" class="form-control formulario__input" id="numeroDocumento"
+                        name="numeroDocumento" aria-placeholder="Ingrese Su Numero De Documento">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El numero de documento solo puede contener numeros y el maximo son 10
+                    dígitos.
                 </p>
             </div>
 
@@ -52,7 +59,8 @@
                         aria-placeholder="Ingrese Su Nombre">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.
                 </p>
             </div>
 
@@ -63,7 +71,8 @@
                         aria-placeholder="Ingrese Su Apellido">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.
                 </p>
             </div>
 
@@ -74,18 +83,20 @@
                         name="fechaNacimiento" aria-placeholder="Ingrese Su Fecha De Nacimiento">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">La fecha de nacimiento debe llevar el formato dia, mes, año, ingrese
+                    una fecha valida.
                 </p>
             </div>
 
-            <div class="mb-3 formulario__grupo" id="grupo__fechaNacimiento">
+            <div class="mb-3 formulario__grupo" id="grupo__correo">
                 <label for="correo" class="formulario__label">Digite Su Correo Electronico</label>
                 <div class="formulario__grupo-input">
                     <input type="email" class="form-control formulario__input" id="correo" name="correo"
                         aria-placeholder="Ingrese Su Correo Electronico">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.
                 </p>
             </div>
 
@@ -96,18 +107,18 @@
                         aria-placeholder="Ingrese Su Contraseña">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.
                 </p>
             </div>
 
-            <div class="mb-3 formulario__grupo">
+            <div class="mb-3 formulario__grupo" id="grupo__contrasena2">
                 <label for="contrasena2" class="formulario__label">Compruebe Su contraseña</label>
                 <div class="formulario__grupo-input">
                     <input type="password" class="form-control formulario__input" id="contrasena2" name="contrasena2"
                         aria-placeholder="Compruebe Su Contraseña">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.
+                <p class="formulario__input-error">Ambas contraseñas deben ser iguales.
                 </p>
             </div>
 
@@ -144,12 +155,13 @@
                     correctamente.</p>
             </div>
 
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"><i class="fa-solid fa-circle-check"></i>
+                Formulario enviado exitosamente!</p>
+
             <center>
                 <button type="submit" class="btn btn-success">VALIDAR</button>
                 <a href="index.html" class="btn btn-primary">REGRESAR</a>
             </center>
-
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 
         </form>
 
